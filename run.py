@@ -1,4 +1,4 @@
 import datalab
 
-res = datalab.fetch('myma.3034.20190101.5')
+res = datalab.fetch('myma.3034.20190105.10')
 print(res)

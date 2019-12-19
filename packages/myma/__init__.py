@@ -9,10 +9,10 @@ class Module(datalab.Module):
     stock_no, date_str, N_str = args
     date = Date(date_str)
     N = int(N_str)
-    get_dates(date, N, stock_no)
+    res = get_dates(date, N)
 
-    #for i in range(N):
-    #  _date = date - i
-    #  _path = f'twse.{stock_no}.{_date}.close'
-    #  print(datalab.fetch(_path))
+    for i in res:
+      _date = Date(i)
+      _path = f'twse.{stock_no}.{_date}.close'
+      print(datalab.fetch(_path))
     return None

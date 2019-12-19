@@ -39,3 +39,5 @@ class Date:
   def __repr__(self):
     return self.date.strftime('%Y-%m-%d')
 
+  def __int__(self):
+    return int(self.date.strftime('%Y%m%d'))
